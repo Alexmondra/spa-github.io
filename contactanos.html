@@ -34,10 +34,10 @@
                 </div>
 
                 <div>
-                    <label>Apellidos: </label><input type="text" name="txtApellidos" id="txtApellidos" placeholder="Ingresa tu Apellido..." autofocus />
+                    <label>Apellidos: </label><input type="text" name="txtApellidos" id="txtApellidos" placeholder="Ingresa tu Apellido..." autofocus required />
                 </div>
                 <div>
-                    <label>Nombres: </label><input type="text" name="txtNombres" id="txtNombres" placeholder="Ingresa tu Nombre..." />
+                    <label>Nombres: </label><input type="text" name="txtNombres" id="txtNombres" placeholder="Ingresa tu Nombre..." required />
                 </div>
                 
                 <div >
@@ -48,21 +48,22 @@
                             <option value="CO" >123</option>
                             <option value="EC">789</option>
                         </select>
-                    <input type="number" name="intNumeroTelefono" id="NumeroT" placeholder="Ingrese su numero aqui" />
+                    <input type="number" name="intNumeroTelefono" id="NumeroT" placeholder="Ingrese su numero aqui" required/>
                     </nav>
 
                 </div>
 
                 <div>
-                    <label>Correo Electronico </label><input type="text" name="Correo" id="correo" placeholder="escriba su correo" />
+                    <label>Correo Electronico </label><input type="text" name="Correo" id="correo" placeholder="escriba su correo" required/>
                 </div>
 
                 <div>
                     <label>Escriba su duda o consulta</label>
                     <textarea name="txtObservaciones" rows="7" cols="40"></textarea>
                 </div>
-                <div>
-                    <input type="button" value="Guardar" name="btnGrabar" id="btnGrabar" />
+                <div class="btn">
+                    <input type="submit" value="Guardar" name="btnGrabar" id="btnGrabar" onclick="validarEmail(form.correo.value)"/>
+                    <input type="reset" name="button2" id="button2" value="Borrar" />
                 </div>
             </form>	
 
@@ -100,6 +101,20 @@
     </footer>
 
     <script>
+        function validarEmail(correo){
+            var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+            var isvalido =expReg.test(correo);
+
+            if (isvalido ==true){
+                alert("peticion enviada correctamente");  
+            }else{
+                alert("Ingrese un correo valido");
+                document.getElementById("correo").focus();
+            }
+        }
+
+
+
         function mostrarHorario(){
             if (document.getElementById("horario").style.display=="block"){
                 document.getElementById("horario").style.display = "none";
@@ -109,7 +124,7 @@
                 document.getElementById("btnMostrar").value="OCULTAR HORARIOS";
             }
         }
-        document.getElementById("btnMostrar").onclick = mostrarHorario;   
+          document.getElementById("btnMostrar").onclick = mostrarHorario;   
     </script>
 
 </body>
