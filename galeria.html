@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="./css/galeria.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Galeria</title>
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script> 
+        <link href="https://fonts.googleapis.com/css?family=raleway:200,300,400&display=swap" rel="stylesheet">
+        <script src="./header_footer/include-html.js"></script>  
+    </head>
+
+    <body>
+        <header>
+            <div data-include="header_footer/menu.html"></div>
+            <nav style="height: 100px;"></nav>
+        </header>
+        <main>
+            <h1 class="ini">GALERIA</h1>
+            <section class="galeria">
+                <a href="#image1"> 
+                    <img src="./Img/uno.jpg" alt=""> 
+                </a>
+
+                <a href="#image2"> 
+                    <img src="./Img/dos.jpg" alt=""> 
+                </a>
+                <a href="#image3">  
+                    <img src="./Img/tres.jpg" alt=""> 
+                </a>
+                <a href="#image4"> 
+                    <img src="./Img/cuatro.jpg" alt=""> 
+                </a>
+                <a href="#image5"> 
+                    <img src="./Img/cinco.jpg" alt=""> 
+                </a>
+                <a href="#image6"> 
+                    <img src="./Img/seis.jpg" alt=""> 
+                </a>
+            </section>
+
+            <article class="ligth-box" id="image1">
+                <a href="#image6" class="next"></a>
+                <img src="./Img/uno.jpg" alt="">
+                <a href="#image2" class="next"></a>
+                <a href="#" class="close">X</a>
+            </article>
+
+            <article class="ligth-box" id="image2">
+                <a href="#image1" class="next"></a>
+                <img src="./Img/dos.jpg" alt="">
+                <a href="#image3" class="next"></a>
+                <a href="#" class="close">X</a>
+            </article>
+
+            <article class="ligth-box" id="image3">
+                <a href="#image2" class="next"></a>
+                <img src="./Img/uno.jpg" alt="">
+                <a href="#image4" class="next"></a>
+                <a href="#" class="close">X</a>
+            </article>
+
+            <article class="ligth-box" id="image4">
+                <a href="#image3" class="next"></a>
+                <img src="./Img/cuatro.jpg" alt="">
+                <a href="#image5" class="next"></a>
+                <a href="#" class="close">X</a>
+            </article>
+
+            <article class="ligth-box" id="image5">
+                <a href="#image4" class="next"></a>
+                <img src="./Img/cinco.jpg" alt="">
+                <a href="#image6" class="next"></a>
+                <a href="#" class="close">X</a>
+            </article>
+
+            <article class="ligth-box" id="image6">
+                <a href="#image5" class="next"></a>
+                <img src="./Img/seis.jpg" alt="">
+                <a href="#image1" class="next"></a>
+                <a href="#" class="close">X</a>
+            </article>
+
+        </main>
+       
+        <footer>
+            <div data-include="header_footer/footer.html"></div>
+        </footer>
+
+    </body>
+
+</html>

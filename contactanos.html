@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/styleContactanos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>  
+    <script src="./header_footer/include-html.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>         
+        <div data-include="header_footer/menu.html"></div>
+        <nav style="height: 100px;"></nav>
+    </header>
+    
+    
+    <div class="fondo">
+        <p>CONTACTANOS</p>
+    </div>
+
+    <div class="contenedor">
+        <div class="iz">
+            <h2>Registro de Datos</h2>
+            <form action="#" method="post" name="formulario" id="formulario">
+                <div>
+                    <label>Sexo: </label>
+                    <input type="radio" name="rbSexo" value="F" checked /> Femenino
+                    <input type="radio" name="rbSexo" value="M" /> Masculino
+                </div>
+
+                <div>
+                    <label>Apellidos: </label><input type="text" name="txtApellidos" id="txtApellidos" placeholder="Ingresa tu Apellido..." autofocus />
+                </div>
+                <div>
+                    <label>Nombres: </label><input type="text" name="txtNombres" id="txtNombres" placeholder="Ingresa tu Nombre..." />
+                </div>
+                
+                <div >
+                    <label>Numero de celular </label>
+                    <nav class="numero_te">
+                        <select name="slPais">
+                            <option value="PE"selected>+51</option>
+                            <option value="CO" >123</option>
+                            <option value="EC">789</option>
+                        </select>
+                    <input type="number" name="intNumeroTelefono" id="NumeroT" placeholder="Ingrese su numero aqui" />
+                    </nav>
+
+                </div>
+
+                <div>
+                    <label>Correo Electronico </label><input type="text" name="Correo" id="correo" placeholder="escriba su correo" />
+                </div>
+
+                <div>
+                    <label>Escriba su duda o consulta</label>
+                    <textarea name="txtObservaciones" rows="7" cols="40"></textarea>
+                </div>
+                <div>
+                    <input type="button" value="Guardar" name="btnGrabar" id="btnGrabar" />
+                </div>
+            </form>	
+
+        </div>
+ 
+        <div class="de">
+            <h2>informacion</h2>
+            <p> <a class="fa fa-map-marker"></a> calle Juan Cuglievan 458, Chiclayo</p>
+            <div class="dat">
+                <a class="fa fa-envelope-open"> Bella_Total</a>
+                <a class="fa fa-phone"> (074) 666666</a>  
+                <a class="fa fa-whatsapp"> 999 999 999</a>     
+            </div>
+            <input type="button" value="MOSTRAR HORARIOS" id="btnMostrar"/>
+            <div id="horario">
+                <p>Lunes a Sabado: <br> 8.00 am - 9.00 pm</p>
+                <p>Domingo: Cerrado</p>
+            </div>
+
+             <div>
+                <h3>SIGUENOS EN</h3>
+                <div class="red-social">
+                    <p><a href="#"class="fa fa-youtube"></a> BELLEZA_TOTAL</p>
+                    
+                   <p> <a href="https://www.facebook.com/bellezatotal1311" class="fa fa-facebook"></a> BELLEZA_TOTAL </p>  
+                   <p> <a href="https://www.instagram.com/bellezatotal_spa/?igshid=YmMyMTA2M2Y%3D" class="fa fa-instagram"></a>BELLEZA_TOTAL </p>
+                </div>
+             </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div data-include="header_footer/footer.html"></div>
+    </footer>
+
+    <script>
+        function mostrarHorario(){
+            if (document.getElementById("horario").style.display=="block"){
+                document.getElementById("horario").style.display = "none";
+                document.getElementById("btnMostrar").value="MOSTRAR HORARIOS";
+            }else{
+                document.getElementById("horario").style.display = "block";
+                document.getElementById("btnMostrar").value="OCULTAR HORARIOS";
+            }
+        }
+        document.getElementById("btnMostrar").onclick = mostrarHorario;   
+    </script>
+
+</body>
+
+</html>
